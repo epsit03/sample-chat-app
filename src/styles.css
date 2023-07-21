@@ -1,0 +1,114 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.room {
+  display: flex;
+  margin: 0 auto;
+  padding: 20px;
+  width: fit-content;
+  align-items: center;
+  border: 2px solid blueviolet;
+  flex-direction: column;
+}
+
+.room button {
+  margin-top: 10px;
+  padding: 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(215, 176, 252, 0.562);
+}
+
+.input-field {
+  position: relative;
+  width: 250px;
+  height: 44px;
+  line-height: 44px;
+}
+
+label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: gray;
+  transition: 0.2s all;
+  cursor: text;
+}
+
+input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid rgb(48, 47, 47);
+  box-shadow: none;
+  color: black;
+}
+
+input :invalid {
+  outline: 0;
+  color: #ff2300;
+  border-color: #ff2300;
+}
+
+input:focus,
+input:valid {
+  border-color: blueviolet;
+}
+input:focus ~ label,
+input:valid ~ label {
+  font-size: 14px;
+  top: -24px;
+  color: blueviolet;
+}
+
+.auth {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  padding: 55px;
+  box-sizing: border-box;
+  border: 1px solid #dadce0;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(248, 220, 251),
+    rgb(247, 238, 228),
+    rgb(247, 228, 247),
+    rgb(246, 239, 246),
+    rgb(223, 230, 243),
+    rgb(247, 238, 228),
+    rgb(247, 238, 228),
+    rgb(248, 220, 251),
+    rgb(247, 238, 228)
+  );
+  background-size: 100%;
+}
+
+.auth p {
+  color: #fff;
+  text-align: center;
+  color: #202124;
+  font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.auth button {
+  box-shadow: 2px 3px 0.3rem rgba(132, 132, 132, 0.5);
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  border-radius: 5px;
+  font-size: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.218);
+  padding: 7px;
+  background-color: rgba(215, 176, 252, 0.562);
+}
